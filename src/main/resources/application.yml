@@ -1,0 +1,22 @@
+server:
+  servlet:
+    encoding:
+      force-response: true
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/security
+    username: postgres
+    password: postgres
+  sql:
+    init:
+      data-locations: classpath:/data.sql
+      mode: never
+
+jwt:
+  token:
+    secret: "secretkey"
